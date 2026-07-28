@@ -81,6 +81,24 @@ tar -czf claude-config.tar.gz CLAUDE.md rules/ templates/ checklists/
 
 ---
 
+## 外部依赖矩阵
+
+部署后运行 `bash ~/.claude/setup-portable.sh` 自动检查。以下为每种依赖缺失时的影响：
+
+| 依赖 | 级别 | 引用位置 | 缺失时退化行为 |
+|------|:----:|---------|---------------|
+| `settings.json`（API Key） | 🔴 硬依赖 | Claude Code 启动 | Claude Code 无法启动，必须手动配置 |
+| `rules/common/*.md`（19 个文件） | 🔴 硬依赖 | CLAUDE.md 规则索引 | 已内置在仓库 ✅，部署后自动就绪 |
+| PM Skills（24 个） | 🟡 软依赖 | `rules/common/pm-workflows.md` | Claude 用通用能力替代，不走专业 PM 工具。现象：竞品分析质量不稳定，PRD 格式不统一 |
+| `code-reviewer` Agent | 🟡 软依赖 | `dev-7step.md` Step 5 | 代码审查退化，用 Claude 自带能力替代。现象：审查不如专用 Agent 细致 |
+| `security-reviewer` Agent | 🟡 软依赖 | `dev-7step.md` Step 6 | 安全审查空转。现象：认证/支付代码无人审查 |
+| `GordenSuperPPTSkill` | 🟢 可选 | `task-workflows.md` 工作汇报 | PPT 生成降级为 Markdown。现象：需要手动粘到 PPT |
+| `supir-mcp-server` | 🟢 可选 | MCP 配置（不在仓库内） | RSC 平台数据查询不可用 |
+| `wps-note-cloud` MCP | 🟢 可选 | `wps-sync.md` | MD 文档不同步到 WPS 便签 |
+| 项目级 `CLAUDE.md` | 🟢 可选 | 项目启动自检 | 项目上下文缺失，Claude 不知道项目技术栈/业务规则 |
+
+---
+
 ## 移植时不需要传的文件
 
 | 文件 | 原因 |
