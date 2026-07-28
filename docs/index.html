@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PMCoding — 把 Claude Code 变成你的 AI 产品研发搭档</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#0a0a0f;color:#e4e4e7;line-height:1.7}
+.container{max-width:960px;margin:0 auto;padding:0 24px}
+nav{padding:16px 0;border-bottom:1px solid #1e1e2e}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+nav a{color:#a1a1aa;text-decoration:none;font-size:14px}
+nav a:hover{color:#fff}
+.hero{padding:100px 0 60px;text-align:center}
+.hero h1{font-size:48px;font-weight:800;color:#fff;margin-bottom:16px;letter-spacing:-1px}
+.hero .gradient{background:linear-gradient(135deg,#a78bfa,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:20px;color:#a1a1aa;max-width:600px;margin:0 auto 40px}
+.btn{display:inline-block;padding:12px 32px;border-radius:8px;font-size:16px;font-weight:600;text-decoration:none;transition:all .2s}
+.btn-primary{background:#7c3aed;color:#fff;margin-right:12px}
+.btn-primary:hover{background:#6d28d9}
+.btn-secondary{background:#1e1e2e;color:#e4e4e7;border:1px solid #2e2e3e}
+.btn-secondary:hover{background:#2e2e3e}
+.features{padding:80px 0}
+.features h2{font-size:32px;text-align:center;margin-bottom:48px;color:#fff}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.feature{border:1px solid #1e1e2e;border-radius:12px;padding:32px;transition:border-color .2s}
+.feature:hover{border-color:#7c3aed}
+.feature-icon{font-size:28px;margin-bottom:16px}
+.feature h3{font-size:18px;color:#fff;margin-bottom:8px}
+.feature p{color:#a1a1aa;font-size:14px}
+.scenarios{padding:80px 0;background:#0d0d14}
+.scenarios h2{font-size:32px;text-align:center;margin-bottom:48px;color:#fff}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid #1e1e2e}
+th{color:#a1a1aa;font-size:12px;text-transform:uppercase}
+td{font-size:14px}.td-type{font-weight:600;white-space:nowrap}
+.install{padding:80px 0}
+.install h2{font-size:32px;text-align:center;margin-bottom:48px;color:#fff}
+.code-block{background:#1e1e2e;border-radius:8px;padding:20px 24px;margin:16px 0;overflow-x:auto;position:relative}
+.code-block code{font-family:"JetBrains Mono",monospace;font-size:13px;color:#e4e4e7;white-space:pre}
+.step-label{color:#a78bfa;font-size:12px;font-weight:600;margin-bottom:4px}
+.before-after{padding:80px 0;background:#0d0d14}
+.before-after h2{font-size:32px;text-align:center;margin-bottom:48px;color:#fff}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.compare-card{border:1px solid #1e1e2e;border-radius:12px;padding:24px}
+.compare-card h3{font-size:16px;margin-bottom:16px}
+.compare-card.bad h3{color:#f87171}
+.compare-card.good h3{color:#4ade80}
+.compare-card p{font-size:14px;color:#a1a1aa;margin-bottom:8px}
+.cta{padding:100px 0;text-align:center}
+.cta h2{font-size:36px;color:#fff;margin-bottom:16px}
+.cta p{color:#a1a1aa;font-size:18px;margin-bottom:40px}
+footer{padding:32px 0;border-top:1px solid #1e1e2e;text-align:center}
+footer p{color:#52525b;font-size:13px}
+footer a{color:#a1a1aa}
+@media(max-width:640px){.hero h1{font-size:32px}.compare-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container">
+    <a href="/" style="font-weight:700;color:#fff;font-size:18px">PMCoding</a>
+    <div style="display:flex;gap:24px">
+      <a href="#features">特性</a>
+      <a href="#scenarios">场景</a>
+      <a href="#install">安装</a>
+      <a href="https://github.com/zhoupppp/pm-coding">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <h1>把 Claude Code 变成<br><span class="gradient">你的 AI 产品研发搭档</span></h1>
+    <p>不只是写代码——从市场调研、产品定义到安全上线，全程护航。128 个文件，零外部依赖，2 分钟部署。</p>
+    <a href="#install" class="btn btn-primary">免费开始</a>
+    <a href="https://github.com/zhoupppp/pm-coding" class="btn btn-secondary">GitHub</a>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="container">
+    <h2>为什么需要 PMCoding</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="feature-icon">🧭</div>
+        <h3>9 种工作场景自适应</h3>
+        <p>产品定义、研发、数据分析、汇报、纪要、调研、学习、文档、咨询——Claude 自动判断该走哪个流程。</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🛡️</div>
+        <h3>生产级安全封控</h3>
+        <p>删除数据库、推送生产分支等 6 类高风险操作先弹确认，不先动手。AI 幻觉自动检测。</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📋</div>
+        <h3>规格驱动开发</h3>
+        <p>写代码前先出 8 维规格卡——确认「要做对的事」再动工，不再闷头瞎写。</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🎯</div>
+        <h3>PM 专业工具链</h3>
+        <p>68 个 PM Skill：SWOT、BMC、用户画像、竞品分析、PRD、OKR、GTM——从调研到发布全覆盖。</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔄</div>
+        <h3>从调研到上线全流程</h3>
+        <p>产品定义 5 阶段（调研→分析→洞察→定义→验证）+ 研发 7 步（需求→规格→架构→编码→测试→安全→上线）。</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>2 分钟部署，零外部依赖</h3>
+        <p>克隆 → 运行脚本 → 配置 API Key。规则、Agent、Skill 全部内置，不需要下载额外插件。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="before-after">
+  <div class="container">
+    <h2>使用前后对比</h2>
+    <div class="compare-grid">
+      <div class="compare-card bad">
+        <h3>默认 Claude Code</h3>
+        <p>「帮我加个登录」→ 直接写代码</p>
+        <p>「分析竞品」→ 给几段文字</p>
+        <p>「删数据库字段」→ 直接删</p>
+        <p>「写 PRD」→ 给通用模板</p>
+        <p>引用了不存在的 API → 编一个</p>
+        <p>紧急任务 → 还是走普通流程</p>
+      </div>
+      <div class="compare-card good">
+        <h3>装上 PMCoding 后</h3>
+        <p>→ 先问清楚：什么方式、给谁用、要不要验证码</p>
+        <p>→ 调竞品分析框架，出 SWOT + 差异化定位</p>
+        <p>→ ⚠️ 先弹确认：影响范围、回滚方案</p>
+        <p>→ 走产品定义流程，从商业模型到用户故事</p>
+        <p>→ 🔍 暂停验证，标注不确定</p>
+        <p>→ 感知时间压力，直接跳到输出</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="scenarios" id="scenarios">
+  <div class="container">
+    <h2>工作场景</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>场景</th><th>典型任务</th><th>Claude 的流程</th></tr>
+        <tr><td class="td-type">🧭 产品定义</td><td>市场调研、竞品分析、PRD、GTM</td><td>5 阶段：调研→分析→洞察→定义→验证</td></tr>
+        <tr><td class="td-type">🏗️ 产品研发</td><td>功能开发、Bug 修复、架构变更</td><td>7 步：澄清→规格→架构→编码→测试→安全→上线</td></tr>
+        <tr><td class="td-type">📊 数据分析</td><td>数据清洗、Excel、图表</td><td>5 步：需求→获取→清洗→验证→报告</td></tr>
+        <tr><td class="td-type">📈 工作汇报</td><td>PPT、周报、可视化报告</td><td>4 步：受众→结构→内容→视觉</td></tr>
+        <tr><td class="td-type">📝 会议纪要</td><td>客户会议、内部评审</td><td>3 步：输入→提炼→行动项</td></tr>
+        <tr><td class="td-type">🔍 轻量调研</td><td>快速了解、技术选型</td><td>4 步：范围→收集→验证→洞察</td></tr>
+        <tr><td class="td-type">📚 学习研究</td><td>学新技术、理解原理</td><td>3 步：问题→解释→应用</td></tr>
+        <tr><td class="td-type">✉️ 文档草拟</td><td>邮件、通知、方案</td><td>直接输出 + 脱敏</td></tr>
+        <tr><td class="td-type">💬 快速咨询</td><td>问定义、快速确认</td><td>直接回答 + 置信度</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="install" id="install">
+  <div class="container">
+    <h2>安装</h2>
+    <div class="step-label">新用户</div>
+    <div class="code-block"><code>git clone https://github.com/zhoupppp/pm-coding.git ~/.pm-coding
+bash ~/.pm-coding/setup-portable.sh
+cp ~/.pm-coding/settings.example.json ~/.claude/settings.json
+# 编辑 settings.json 填入你的 API Key，然后重启 Claude Code</code></div>
+    <div class="step-label" style="margin-top:32px">老用户（更新）</div>
+    <div class="code-block"><code>cd ~/.pm-coding && git pull && bash setup-portable.sh</code></div>
+    <p style="margin-top:16px;color:#a1a1aa;font-size:14px">
+      需要帮助？查看 <a href="https://github.com/zhoupppp/pm-coding/blob/master/PORTABLE-GUIDE.md" style="color:#a78bfa">完整文档</a> ·
+      提 <a href="https://github.com/zhoupppp/pm-coding/issues" style="color:#a78bfa">Issue</a>
+    </p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>让你的 Claude Code 从助手变成搭档</h2>
+    <p>128 个文件 · 零外部依赖 · MIT 开源</p>
+    <a href="#install" class="btn btn-primary">免费开始</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>PMCoding · MIT License · <a href="https://github.com/zhoupppp/pm-coding">GitHub</a></p>
+  </div>
+</footer>
+</body>
+</html>
