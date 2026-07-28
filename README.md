@@ -24,7 +24,7 @@
 
 ```bash
 # 克隆到 Claude Code 配置目录
-git clone https://github.com/ikevss/claude-config.git ~/.claude-config
+git clone https://github.com/zhoupppp/pm-coding.git ~/.claude-config
 
 # 部署规则文件
 cp ~/.claude-config/CLAUDE.md ~/.claude/
