@@ -1,0 +1,25 @@
+{
+  "model": "sonnet",
+  "language": "zh-CN",
+  "permissions": {
+    "allow": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Git",
+      "Grep",
+      "Glob"
+    ],
+    "deny": [
+      "Rm",
+      "Ssh",
+      "Sudo"
+    ]
+  },
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "sk-你的API-Key",
+    "ANTHROPIC_BASE_URL": "https://api.anthropic.com",
+    "ANTHROPIC_MODEL": "claude-sonnet-4-6"
+  }
+}

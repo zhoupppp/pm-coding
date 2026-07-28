@@ -30,7 +30,22 @@ skills.backup/
 skills-archive/
 skills-panel-icons/
 skills-panel-config.json
-agents/
+
+# Agents — 只纳入规则引用的核心 Agent，其余忽略
+agents/*
+!agents/code-reviewer.md
+!agents/security-reviewer.md
+!agents/tdd-guide.md
+!agents/architect.md
+!agents/planner.md
+!agents/build-error-resolver.md
+!agents/refactor-cleaner.md
+!agents/silent-failure-hunter.md
+!agents/e2e-runner.md
+!agents/doc-updater.md
+!agents/performance-optimizer.md
+
+# 未清理的历史资产（继续忽略）
 commands/
 hooks/
 
