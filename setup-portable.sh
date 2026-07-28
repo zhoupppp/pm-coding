@@ -47,7 +47,21 @@ else
     WARNINGS=$((WARNINGS + 1))
 fi
 
-# ---- 4. 部署模板和清单 ----
+# ---- 4. 部署 PM Skills ----
+echo ""
+echo "[4/6] 部署 PM Skills (skills/pm/)..."
+PM_SRC="${SOURCE_DIR}/skills/pm"
+if [ -d "$PM_SRC" ] && [ "$(ls "$PM_SRC" 2>/dev/null)" ]; then
+    mkdir -p "${CLAUDE_HOME}/skills/pm"
+    cp -r "$PM_SRC"/* "${CLAUDE_HOME}/skills/pm/" 2>/dev/null
+    PM_COUNT=$(find "${CLAUDE_HOME}/skills/pm" -name "SKILL.md" | wc -l)
+    echo "  ✓ skills/pm/ (${PM_COUNT} 个 Skill)"
+else
+    echo "  ⚠ skills/pm/ 未找到 → PM 工作流退化"
+    WARNINGS=$((WARNINGS + 1))
+fi
+
+# ---- 5. 部署模板和清单 ----
 echo ""
 echo "[5/6] 部署模板和清单..."
 if [ -d "${SOURCE_DIR}/templates" ]; then

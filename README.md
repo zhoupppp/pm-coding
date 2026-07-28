@@ -23,19 +23,10 @@
 ### 1. 安装
 
 ```bash
-# 克隆到 Claude Code 配置目录
+# 克隆仓库
 git clone https://github.com/zhoupppp/pm-coding.git ~/.claude-config
 
-# 部署规则文件
-cp ~/.claude-config/CLAUDE.md ~/.claude/
-cp -r ~/.claude-config/rules/common/ ~/.claude/rules/common/
-cp -r ~/.claude-config/templates/ ~/.claude/templates/
-cp -r ~/.claude-config/checklists/ ~/.claude/checklists/
-```
-
-**或者**运行一键脚本：
-
-```bash
+# 一键部署（推荐）
 bash ~/.claude-config/setup-portable.sh
 ```
 
@@ -137,6 +128,11 @@ bash ~/.claude-config/setup-portable.sh
 ```
 ~/.claude/
 ├── CLAUDE.md              ← 核心配置（每次会话加载）
+├── settings.example.json  ← API Key 配置模板
+├── agents/                ← 11 个核心 Agent（自动加载）
+│   ├── code-reviewer.md       代码审查
+│   ├── security-reviewer.md   安全审查
+│   └── ...（架构/规划/TDD/调试等）
 ├── rules/common/          ← 19 个规则文件（自动加载）
 │   ├── pm-workflows.md        PM 工作流
 │   ├── dev-7step.md           研发 7 步流程
@@ -145,12 +141,13 @@ bash ~/.claude-config/setup-portable.sh
 │   ├── experience.md          经验沉淀
 │   ├── project-config.md      项目配置规范
 │   └── ...（安全/测试/代码审查等）
-├── templates/             ← 操作模板
+├── skills/pm/             ← 68 个 PM Skill（PM 工作流调用）
+├── templates/             ← 4 个操作模板
 │   ├── spec-card.md           规格卡
 │   ├── rollback-plan.md       回滚方案
 │   ├── acceptance-report.md   验收报告
 │   └── retrospective.md       复盘模板
-├── checklists/            ← 可勾选清单
+├── checklists/            ← 2 个可勾选清单
 │   ├── production-gate.md     上线门禁
 │   └── code-review.md         代码审查
 └── README.md              ← 本文件
