@@ -24,8 +24,11 @@ temp_*.ps1
 prompt-queue.json
 stats-cache.json
 
-# 未清理的历史资产
-skills/
+# Skills — 只纳入 PM Skills 包，其余忽略
+skills/*
+!skills/pm/
+skills/pm/*
+!skills/pm/pm-*/
 skills.backup/
 skills-archive/
 skills-panel-icons/
@@ -63,3 +66,4 @@ homunculus/
 defender-exclusions.txt
 .statusline.sh
 RTK.md
+skills/pm/*/.in_use/

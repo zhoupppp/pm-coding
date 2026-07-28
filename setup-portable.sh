@@ -17,7 +17,7 @@ WARNINGS=0
 OKS=0
 
 # ---- 1. 创建目录结构 ----
-echo "[1/5] 创建目录结构..."
+echo "[1/6] 创建目录结构..."
 mkdir -p "${CLAUDE_HOME}/rules/common"
 mkdir -p "${CLAUDE_HOME}/templates"
 mkdir -p "${CLAUDE_HOME}/checklists"
@@ -25,7 +25,7 @@ echo "  ✓ 目录就绪"
 
 # ---- 2. 部署 CLAUDE.md ----
 echo ""
-echo "[2/5] 部署核心配置..."
+echo "[2/6] 部署核心配置..."
 if [ -f "${SOURCE_DIR}/CLAUDE.md" ]; then
     cp "${SOURCE_DIR}/CLAUDE.md" "${CLAUDE_HOME}/CLAUDE.md"
     echo "  ✓ CLAUDE.md ($(wc -l < "${CLAUDE_HOME}/CLAUDE.md") 行)"
@@ -36,7 +36,7 @@ fi
 
 # ---- 3. 部署 rules/common/ ----
 echo ""
-echo "[3/5] 部署规则库 (rules/common/)..."
+echo "[3/6] 部署规则库 (rules/common/)..."
 RULES_SRC="${SOURCE_DIR}/rules/common"
 if [ -d "$RULES_SRC" ]; then
     cp "$RULES_SRC"/*.md "${CLAUDE_HOME}/rules/common/" 2>/dev/null
@@ -49,7 +49,7 @@ fi
 
 # ---- 4. 部署模板和清单 ----
 echo ""
-echo "[4/5] 部署模板和清单..."
+echo "[5/6] 部署模板和清单..."
 if [ -d "${SOURCE_DIR}/templates" ]; then
     cp "${SOURCE_DIR}/templates"/*.md "${CLAUDE_HOME}/templates/" 2>/dev/null
     echo "  ✓ templates/ ($(ls "${CLAUDE_HOME}/templates/" | wc -l) 个)"
@@ -61,7 +61,7 @@ fi
 
 # ---- 5. 依赖检查 ----
 echo ""
-echo "[5/5] 外部依赖检查..."
+echo "[6/6] 外部依赖检查..."
 echo "----------------------------------------"
 
 # 检查 settings.json（Claude Code 启动必需）
@@ -74,7 +74,7 @@ else
 fi
 
 # 检查 PM Skills（pm-workflows.md 引用了 24 个）
-PM_SKILL_COUNT=$(find "${CLAUDE_HOME}/skills" "${CLAUDE_HOME}/plugins" -name "SKILL.md" 2>/dev/null | wc -l)
+PM_SKILL_COUNT=$(find "${CLAUDE_HOME}/skills/pm" -name "SKILL.md" 2>/dev/null | wc -l)
 if [ "$PM_SKILL_COUNT" -gt 0 ]; then
     echo "  ✓ PM Skills            [软依赖] 检测到 ${PM_SKILL_COUNT} 个 Skill"
     OKS=$((OKS + 1))
@@ -141,6 +141,7 @@ echo ""
 echo "规则文件：已部署"
 echo "  ~/.claude/CLAUDE.md"
 echo "  ~/.claude/rules/common/ (${COUNT} 个)"
+echo "  ~/.claude/skills/pm/ (${PM_COUNT} 个 Skill)"
 echo "  ~/.claude/templates/"
 echo "  ~/.claude/checklists/"
 echo ""
