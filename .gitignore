@@ -1,0 +1,50 @@
+# 个人敏感数据
+settings.json
+settings.local.json
+memory/
+projects/
+session-data/
+session-env/
+sessions/
+transcripts/
+usage-data/
+history.jsonl
+daemon.log
+config.json
+
+# 临时与缓存
+cache/
+debug/
+file-history/
+paste-cache/
+shell-snapshots/
+tasks/
+jobs/
+temp_*.ps1
+prompt-queue.json
+stats-cache.json
+
+# 未清理的历史资产
+skills/
+skills.backup/
+skills-archive/
+skills-panel-icons/
+skills-panel-config.json
+agents/
+commands/
+hooks/
+
+# 备份
+backups/
+backup-*/
+
+# 项目特定
+supir/
+supir-rsc-pack-*/
+plans/
+ide/
+plugins/
+homunculus/
+defender-exclusions.txt
+.statusline.sh
+RTK.md
