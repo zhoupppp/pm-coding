@@ -1,6 +1,6 @@
 ---
 name: performance-optimizer
-description: "性能分析和优化专家。主动用于识别瓶颈、优化慢代码、减小包体积和提升运行时性能。涵盖性能分析、内存泄漏、渲染优化和算法改进。调用前请先查阅 [[agent-resource-catalog]] 了解可用的 Skills 和 MCP 工具。"
+description: "性能分析和优化专家。主动用于识别瓶颈、优化慢代码、减小包体积和提升运行时性能。涵盖性能分析、内存泄漏、渲染优化和算法改进。"
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: sonnet
 ---

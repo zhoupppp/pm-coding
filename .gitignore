@@ -47,6 +47,7 @@ agents/*
 !agents/e2e-runner.md
 !agents/doc-updater.md
 !agents/performance-optimizer.md
+!agents/typescript-reviewer.md
 
 # 未清理的历史资产（继续忽略）
 commands/

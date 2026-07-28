@@ -1,6 +1,6 @@
 ---
 name: build-error-resolver
-description: "构建和 TypeScript 错误解决专家。当构建失败或类型错误时主动调用。仅修复构建/类型错误，不做架构修改，以最小 diff 快速通过构建。调用前请先查阅 [[agent-resource-catalog]] 了解可用的 Skills 和 MCP 工具。"
+description: "构建和 TypeScript 错误解决专家。当构建失败或类型错误时主动调用。仅修复构建/类型错误，不做架构修改，以最小 diff 快速通过构建。"
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: sonnet
 ---

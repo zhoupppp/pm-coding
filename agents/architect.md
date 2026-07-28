@@ -1,6 +1,6 @@
 ---
 name: architect
-description: "软件架构专家，负责系统设计、可扩展性和技术决策。在规划新功能、重构大型系统或做架构决策时主动调用。调用前请先查阅 [[agent-resource-catalog]] 了解可用的 Skills 和 MCP 工具。"
+description: "软件架构专家，负责系统设计、可扩展性和技术决策。在规划新功能、重构大型系统或做架构决策时主动调用。"
 tools: ["Read", "Grep", "Glob"]
 model: opus
 ---

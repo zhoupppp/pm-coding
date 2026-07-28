@@ -1,6 +1,6 @@
 ---
 name: tdd-guide
-description: "测试驱动开发专家，强制执行先写测试的方法论。在编写新功能、修复 Bug 或重构代码时主动调用。确保 80%+ 测试覆盖率。调用前请先查阅 [[agent-resource-catalog]] 了解可用的 Skills 和 MCP 工具。"
+description: "测试驱动开发专家，强制执行先写测试的方法论。在编写新功能、修复 Bug 或重构代码时主动调用。确保 80%+ 测试覆盖率。"
 tools: ["Read", "Write", "Edit", "Bash", "Grep"]
 model: sonnet
 ---

@@ -1,6 +1,6 @@
 ---
 name: doc-updater
-description: "文档和 codemap 专家。主动用于更新 codemap 和文档。运行 /update-codemaps 和 /update-docs，生成 docs/CODEMAPS/*，更新 README 和指南。调用前请先查阅 [[agent-resource-catalog]] 了解可用的 Skills 和 MCP 工具。"
+description: "文档和 codemap 专家。主动用于更新 codemap 和文档。运行 /update-codemaps 和 /update-docs，生成 docs/CODEMAPS/*，更新 README 和指南。"
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: haiku
 ---

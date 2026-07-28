@@ -1,6 +1,6 @@
 ---
 name: code-reviewer
-description: "通用代码质量审查 agent。在主要功能步骤完成后、提交前调用。覆盖架构合理性、命名规范、错误处理、代码复用、安全性、测试覆盖等通用质量指标。与语言专项 agent（vue3-reviewer、typescript-reviewer、python-reviewer、go-reviewer、rust-reviewer）互补使用，不重复其专项检查。示例触发：用户说'实现了 XX 功能'、'完成了 XX 模块'、'准备提交了'。调用前请先查阅 [[agent-resource-catalog]] 了解可用的 Skills 和 MCP 工具。"
+description: "通用代码质量审查 agent。在主要功能步骤完成后、提交前调用。覆盖架构合理性、命名规范、错误处理、代码复用、安全性、测试覆盖等通用质量指标。与语言专项 agent（vue3-reviewer、typescript-reviewer、python-reviewer、go-reviewer、rust-reviewer）互补使用，不重复其专项检查。示例触发：用户说'实现了 XX 功能'、'完成了 XX 模块'、'准备提交了'。"
 tools: ["Read", "Grep", "Glob", "Bash"]
 model: sonnet
 ---
@@ -339,9 +339,9 @@ This is a **general** code reviewer. For language/framework-specific checks, ALS
 
 The specialized agent will catch issues this general reviewer cannot see (e.g., Vue reactivity loss, TypeScript type narrowing, Go goroutine leaks).
 
-## Available Resources Reference
+## Available Resources
 
-Before reviewing, check [[agent-resource-catalog]] for:
-- Skills you can invoke (e.g., `chinese-code-review`, `security-review`)
-- MCP servers available (e.g., `context7` for documentation lookup)
-- Commands available (e.g., `/code-review`, `/quality-gate`)
+Before reviewing, dynamically discover available:
+- Skills via the Skill tool
+- MCP servers via the mcp__ tool prefix
+- Commands via the /command system

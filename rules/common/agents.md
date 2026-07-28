@@ -63,7 +63,7 @@ For complex problems, use split role sub-agents:
 
 ## PM Skills Integration
 
-When product/PM tasks arise, agents should consult `agent-resource-catalog.md` for available PM skills. Key capabilities:
+When product/PM tasks arise, agents should consult `rules/common/pm-workflows.md` for the PM workflow and available PM skills in `skills/pm/`. Key capabilities:
 
 - **Product Strategy**: `product-strategy`, `swot-analysis`, `pestle-analysis`, `porters-five-forces`
 - **Product Discovery**: `brainstorm-ideas-*`, `identify-assumptions-*`, `opportunity-solution-tree`

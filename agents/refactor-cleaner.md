@@ -1,6 +1,6 @@
 ---
 name: refactor-cleaner
-description: "死代码清理和整合专家。主动用于移除未使用的代码、重复代码和重构。运行分析工具（knip、depcheck、ts-prune）识别死代码并安全移除。调用前请先查阅 [[agent-resource-catalog]] 了解可用的 Skills 和 MCP 工具。"
+description: "死代码清理和整合专家。主动用于移除未使用的代码、重复代码和重构。运行分析工具（knip、depcheck、ts-prune）识别死代码并安全移除。"
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: sonnet
 ---

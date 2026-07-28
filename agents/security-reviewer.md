@@ -1,6 +1,6 @@
 ---
 name: security-reviewer
-description: "安全漏洞检测和修复专家。在编写处理用户输入、认证、API 端点或敏感数据的代码后主动使用。标记密钥、SSRF、注入、不安全加密和 OWASP Top 10 漏洞。调用前请先查阅 [[agent-resource-catalog]] 了解可用的 Skills 和 MCP 工具。"
+description: "安全漏洞检测和修复专家。在编写处理用户输入、认证、API 端点或敏感数据的代码后主动使用。标记密钥、SSRF、注入、不安全加密和 OWASP Top 10 漏洞。"
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: sonnet
 ---

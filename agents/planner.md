@@ -1,6 +1,6 @@
 ---
 name: planner
-description: "复杂功能和重构的专家级规划师。在用户请求功能实现、架构变更或复杂重构时主动调用。自动激活用于规划任务。调用前请先查阅 [[agent-resource-catalog]] 了解可用的 Skills 和 MCP 工具。"
+description: "复杂功能和重构的专家级规划师。在用户请求功能实现、架构变更或复杂重构时主动调用。自动激活用于规划任务。"
 tools: ["Read", "Grep", "Glob"]
 model: opus
 ---

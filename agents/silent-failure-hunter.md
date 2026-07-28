@@ -1,6 +1,6 @@
 ---
 name: silent-failure-hunter
-description: "静默失败检测专家。审查代码中吞掉的错误、缺失的 fallback、未传播的错误和不完整的错误处理。在关键路径代码变更后主动调用。调用前请先查阅 [[agent-resource-catalog]] 了解可用的 Skills 和 MCP 工具。"
+description: "静默失败检测专家。审查代码中吞掉的错误、缺失的 fallback、未传播的错误和不完整的错误处理。在关键路径代码变更后主动调用。"
 tools: ["Read", "Grep", "Glob", "Bash"]
 model: sonnet
 ---

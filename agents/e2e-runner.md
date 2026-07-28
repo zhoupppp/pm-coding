@@ -1,6 +1,6 @@
 ---
 name: e2e-runner
-description: 端到端测试专家，使用 Vercel Agent Browser（优先）和 Playwright 回退。主动用于生成、维护和运行 E2E 测试。管理测试旅程、隔离不稳定测试、上传产物（截图、视频、追踪），确保关键用户流程正常。调用前请先查阅 [[agent-resource-catalog]] 了解可用的 Skills 和 MCP 工具。
+description: 端到端测试专家，使用 Vercel Agent Browser（优先）和 Playwright 回退。主动用于生成、维护和运行 E2E 测试。管理测试旅程、隔离不稳定测试、上传产物（截图、视频、追踪），确保关键用户流程正常。
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: sonnet
 ---

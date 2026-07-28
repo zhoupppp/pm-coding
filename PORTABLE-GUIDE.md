@@ -63,7 +63,6 @@ tar -czf claude-config.tar.gz CLAUDE.md rules/ templates/ checklists/
 | `rules/common/hooks.md` | Hook系统 |
 | `rules/common/patterns.md` | 设计模式 |
 | `rules/common/performance.md` | 模型策略（待修正） |
-| `rules/common/wps-sync.md` | WPS同步（可选） |
 
 ### 第三层：模板
 | 文件 | 用途 |
@@ -94,7 +93,7 @@ tar -czf claude-config.tar.gz CLAUDE.md rules/ templates/ checklists/
 | `security-reviewer` Agent | 🟡 软依赖 | `dev-7step.md` Step 6 | 安全审查空转。现象：认证/支付代码无人审查 |
 | `GordenSuperPPTSkill` | 🟢 可选 | `task-workflows.md` 工作汇报 | PPT 生成降级为 Markdown。现象：需要手动粘到 PPT |
 | `supir-mcp-server` | 🟢 可选 | MCP 配置（不在仓库内） | RSC 平台数据查询不可用 |
-| `wps-note-cloud` MCP | 🟢 可选 | `wps-sync.md` | MD 文档不同步到 WPS 便签 |
+| `wps-note-cloud` MCP | 🟢 可选 | 个人 MCP 服务 | MD 文档不同步到 WPS 便签 |
 | 项目级 `CLAUDE.md` | 🟢 可选 | 项目启动自检 | 项目上下文缺失，Claude 不知道项目技术栈/业务规则 |
 
 ---
