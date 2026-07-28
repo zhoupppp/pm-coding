@@ -2,6 +2,8 @@
 
 > 把 Claude Code 变成你的 AI 产品研发搭档——不只是写代码，而是从调研到上线全程护航。
 
+🌐 **官网**: [zhoupppp.github.io/pm-coding](https://zhoupppp.github.io/pm-coding/)
+
 <p align="center">
   <strong>9 种工作场景 · PM 专业工具链 · 安全封控 · 规格驱动 · 一键部署</strong>
 </p>
