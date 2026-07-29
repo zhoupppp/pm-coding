@@ -4,9 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PMCoding — 把 Claude Code 变成你的 AI 产品研发搭档</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700;800&family=Geist+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#1a1a2e;background:#fafafa;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{font-family:'Geist',-apple-system,BlinkMacSystemFont,sans-serif;color:#1a1a2e;background:#fafafa;line-height:1.65;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 .container{max-width:1040px;margin:0 auto;padding:0 32px}
 
@@ -19,9 +22,10 @@ nav{position:sticky;top:0;z-index:10;background:rgba(250,250,250,.92);backdrop-f
 .nav-links{display:flex;gap:28px}
 .nav-links a{font-size:13px;color:#6e6e7a;text-decoration:none;transition:color .15s}
 .nav-links a:hover{color:#1a1a2e}
+a:focus-visible,button:focus-visible{outline:2px solid #2563eb;outline-offset:2px;border-radius:4px}
 
 /* hero */
-.hero{padding:100px 0 70px;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.hero{padding:100px 0 70px;display:grid;grid-template-columns:1.3fr 0.7fr;gap:60px;align-items:center;opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .hero.visible{opacity:1;transform:translateY(0)}
 .hero-eyebrow{font-size:12px;font-weight:700;color:#2563eb;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px}
 .hero h1{font-size:46px;font-weight:800;color:#0f0f1a;line-height:1.1;letter-spacing:-1.5px;margin-bottom:16px}
@@ -41,13 +45,13 @@ nav{position:sticky;top:0;z-index:10;background:rgba(250,250,250,.92);backdrop-f
 .terminal-bar span:nth-child(1){background:#ff5f57}
 .terminal-bar span:nth-child(2){background:#febc2e}
 .terminal-bar span:nth-child(3){background:#28c840}
-.terminal-body{padding:18px 20px;font-family:"JetBrains Mono","Fira Code",monospace;font-size:11px;line-height:1.8;color:#a1a1aa}
+.terminal-body{padding:18px 20px;font-family:"Geist Mono","JetBrains Mono","Fira Code",monospace;font-size:11px;line-height:1.8;color:#a1a1aa}
 .terminal-body .prompt{color:#2563eb}
 .terminal-body .cmd{color:#4ade80}
 .terminal-body .dim{color:#52525b}
 
 /* stats */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-bottom:70px;opacity:0;transform:translateY(20px);transition:opacity .6s .2s ease,transform .6s .2s ease}
+.stats{display:grid;grid-template-columns:1.2fr 0.8fr 1.2fr 0.8fr;gap:0;margin-bottom:70px;opacity:0;transform:translateY(20px);transition:opacity .6s .2s ease,transform .6s .2s ease}
 .stats.visible{opacity:1;transform:translateY(0)}
 .stat{padding:22px 0;border-bottom:1px solid #e5e5ea}
 .stat:first-child{border-top:1px solid #e5e5ea}
@@ -77,14 +81,14 @@ nav{position:sticky;top:0;z-index:10;background:rgba(250,250,250,.92);backdrop-f
 .skill-card{border:1px solid #e5e5ea;border-radius:8px;padding:14px 16px;transition:all .2s;cursor:default}
 .skill-card:hover{border-color:#2563eb;box-shadow:0 2px 10px rgba(37,99,235,.1);transform:translateY(-2px)}
 .skill-header{display:flex;align-items:baseline;gap:8px;margin-bottom:6px}
-.skill-orig{font-size:11px;font-weight:600;color:#6e6e7a;font-family:"JetBrains Mono",monospace}
+.skill-orig{font-size:11px;font-weight:600;color:#6e6e7a;font-family:"Geist Mono","JetBrains Mono",monospace}
 .skill-cn{font-size:14px;font-weight:700;color:#1a1a2e}
 .skill-scenario{font-size:12px;color:#6e6e7a;line-height:1.5}
 
 /* install */
 .install-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
 .install-block h4{font-size:12px;font-weight:700;color:#2563eb;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
-.code-box{background:#fff;border:1px solid #e5e5ea;border-radius:8px;padding:16px 18px;font-family:"JetBrains Mono","Fira Code",monospace;font-size:11px;line-height:1.8;color:#52525b;overflow-x:auto}
+.code-box{background:#fff;border:1px solid #e5e5ea;border-radius:8px;padding:16px 18px;font-family:"Geist Mono","JetBrains Mono","Fira Code",monospace;font-size:11px;line-height:1.8;color:#52525b;overflow-x:auto}
 .code-box .c{color:#a1a1aa}
 
 /* cta */
@@ -143,7 +147,6 @@ footer a{color:#6e6e7a;text-decoration:none}
     <p>从市场调研、产品定义到安全上线，全程护航。66 个 PM 专业工具、9 种工作场景自动识别、生产级安全封控。</p>
     <div class="actions">
       <a href="#install" class="btn btn-primary">免费开始</a>
-      <a href="https://github.com/zhoupppp/pm-coding" class="btn btn-secondary">GitHub</a>
     </div>
   </div>
   <div>
