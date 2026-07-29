@@ -76,14 +76,17 @@ a:focus-visible,button:focus-visible{outline:2px solid #2563eb;outline-offset:2p
 .tab-panel.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
-/* skill grid */
+/* capability map */
+.capability-map{margin-bottom:40px;text-align:center}
+.capability-map svg{max-width:100%;height:auto}
 .skill-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
 .skill-card{border:1px solid #e5e5ea;border-radius:8px;padding:14px 16px;transition:all .2s;cursor:default}
 .skill-card:hover{border-color:#2563eb;box-shadow:0 2px 10px rgba(37,99,235,.1);transform:translateY(-2px)}
-.skill-header{display:flex;align-items:baseline;gap:8px;margin-bottom:6px}
-.skill-orig{font-size:11px;font-weight:600;color:#6e6e7a;font-family:"Geist Mono","JetBrains Mono",monospace}
-.skill-cn{font-size:14px;font-weight:700;color:#1a1a2e}
+.skill-header{display:flex;flex-direction:column;gap:2px;margin-bottom:6px}
+.skill-orig{font-size:10px;font-weight:600;color:#94a3b8;font-family:"Geist Mono","JetBrains Mono",monospace;text-transform:lowercase}
+.skill-cn{font-size:14px;font-weight:700;color:#1a1a2e;line-height:1.3}
 .skill-scenario{font-size:12px;color:#6e6e7a;line-height:1.5}
+.skill-icon{width:28px;height:28px;margin-bottom:8px;stroke:#2563eb;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
 /* install */
 .install-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
@@ -178,6 +181,37 @@ footer a{color:#6e6e7a;text-decoration:none}
   <div class="section-label">能力全景</div>
   <h2>从调研到上线，66 个 PM 专业工具</h2>
   <p class="subtitle">覆盖产品战略、市场研究、数据分析、产品执行、市场进入全流程。每个 Skill 都是独立的专业工具，Claude 根据任务自动调用。</p>
+  <div class="capability-map">
+    <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" width="100%" height="200">
+      <defs>
+        <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.3"/>
+          <stop offset="50%" style="stop-color:#2563eb;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#2563eb;stop-opacity:0.3"/>
+        </linearGradient>
+      </defs>
+      <line x1="100" y1="100" x2="200" y2="60" stroke="url(#lineGrad)" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/></line>
+      <line x1="200" y1="60" x2="300" y2="100" stroke="url(#lineGrad)" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3s" begin="0.3s" repeatCount="indefinite"/></line>
+      <line x1="300" y1="100" x2="400" y2="50" stroke="url(#lineGrad)" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3s" begin="0.6s" repeatCount="indefinite"/></line>
+      <line x1="400" y1="50" x2="500" y2="100" stroke="url(#lineGrad)" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3s" begin="0.9s" repeatCount="indefinite"/></line>
+      <line x1="500" y1="100" x2="600" y2="60" stroke="url(#lineGrad)" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3s" begin="1.2s" repeatCount="indefinite"/></line>
+      <line x1="600" y1="60" x2="700" y2="100" stroke="url(#lineGrad)" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3s" begin="1.5s" repeatCount="indefinite"/></line>
+      <circle cx="400" cy="100" r="28" fill="#2563eb" opacity="0.1"><animate attributeName="r" values="26;32;26" dur="4s" repeatCount="indefinite"/></circle>
+      <circle cx="400" cy="100" r="12" fill="#2563eb"><animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/></circle>
+      <g font-family="Geist,sans-serif" font-size="10" fill="#47555b" text-anchor="middle">
+        <circle cx="100" cy="100" r="18" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"><animate attributeName="r" values="16;20;16" dur="3s" repeatCount="indefinite"/></circle><text x="100" y="104">战略</text>
+        <circle cx="200" cy="60" r="18" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"><animate attributeName="r" values="16;20;16" dur="3s" begin="0.5s" repeatCount="indefinite"/></circle><text x="200" y="64">发现</text>
+        <circle cx="300" cy="100" r="18" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"><animate attributeName="r" values="16;20;16" dur="3s" begin="1s" repeatCount="indefinite"/></circle><text x="300" y="104">研究</text>
+        <circle cx="500" cy="100" r="18" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"><animate attributeName="r" values="16;20;16" dur="3s" begin="2s" repeatCount="indefinite"/></circle><text x="500" y="104">执行</text>
+        <circle cx="600" cy="60" r="18" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"><animate attributeName="r" values="16;20;16" dur="3s" begin="2.5s" repeatCount="indefinite"/></circle><text x="600" y="64">GTM</text>
+        <circle cx="700" cy="100" r="18" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"><animate attributeName="r" values="16;20;16" dur="3s" begin="3s" repeatCount="indefinite"/></circle><text x="700" y="104">交付</text>
+      </g>
+      <circle cx="150" cy="80" r="2" fill="#2563eb" opacity="0.4"><animate attributeName="cy" values="80;75;80" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.5s" repeatCount="indefinite"/></circle>
+      <circle cx="350" cy="75" r="2" fill="#2563eb" opacity="0.4"><animate attributeName="cy" values="75;70;75" dur="3s" begin="0.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" begin="0.5s" repeatCount="indefinite"/></circle>
+      <circle cx="550" cy="80" r="2" fill="#2563eb" opacity="0.4"><animate attributeName="cy" values="80;75;80" dur="2.8s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.8s" begin="1s" repeatCount="indefinite"/></circle>
+      <circle cx="650" cy="85" r="2" fill="#2563eb" opacity="0.4"><animate attributeName="cy" values="85;80;85" dur="3.2s" begin="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.2s" begin="1.5s" repeatCount="indefinite"/></circle>
+    </svg>
+  </div>
   <div class="tabs">
         <button class="tab-btn active" data-tab="产品战略">产品战略</button>
         <button class="tab-btn" data-tab="产品发现">产品发现</button>
@@ -191,86 +225,98 @@ footer a{color:#6e6e7a;text-decoration:none}
       <div class="tab-panel active" data-panel="产品战略">
         <div class="skill-grid">
 <div class="skill-card" data-skill="business-model">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">business-model</span>
     <span class="skill-cn">商业模式画布</span>
+    <span class="skill-orig">business-model</span>
   </div>
   <div class="skill-scenario">当你需要梳理商业模式、向投资人展示价值主张、或验证新业务时使用</div>
 </div>
 <div class="skill-card" data-skill="lean-canvas">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">lean-canvas</span>
     <span class="skill-cn">精益画布</span>
+    <span class="skill-orig">lean-canvas</span>
   </div>
   <div class="skill-scenario">当你需要快速验证创业假设、梳理问题-方案-指标时使用</div>
 </div>
 <div class="skill-card" data-skill="startup-canvas">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">startup-canvas</span>
     <span class="skill-cn">创业画布</span>
+    <span class="skill-orig">startup-canvas</span>
   </div>
   <div class="skill-scenario">当你需要同时分析产品战略和商业模型、评估新项目时使用</div>
 </div>
 <div class="skill-card" data-skill="product-strategy">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">product-strategy</span>
     <span class="skill-cn">产品战略规划</span>
+    <span class="skill-orig">product-strategy</span>
   </div>
   <div class="skill-scenario">当你需要制定产品方向、从愿景到护城河的全局规划时使用</div>
 </div>
 <div class="skill-card" data-skill="product-vision">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">product-vision</span>
     <span class="skill-cn">产品愿景设计</span>
+    <span class="skill-orig">product-vision</span>
   </div>
   <div class="skill-scenario">当你需要定义团队使命、写出有感染力的产品方向时使用</div>
 </div>
 <div class="skill-card" data-skill="swot-analysis">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">swot-analysis</span>
     <span class="skill-cn">SWOT 分析</span>
+    <span class="skill-orig">swot-analysis</span>
   </div>
   <div class="skill-scenario">当你需要评估竞争态势、识别优劣势和外部机会威胁时使用</div>
 </div>
 <div class="skill-card" data-skill="ansoff-matrix">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">ansoff-matrix</span>
     <span class="skill-cn">安索夫增长矩阵</span>
+    <span class="skill-orig">ansoff-matrix</span>
   </div>
   <div class="skill-scenario">当你需要选择增长策略——市场渗透还是多元化时使用</div>
 </div>
 <div class="skill-card" data-skill="pestle-analysis">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">pestle-analysis</span>
     <span class="skill-cn">PESTLE 宏观分析</span>
+    <span class="skill-orig">pestle-analysis</span>
   </div>
   <div class="skill-scenario">当你需要扫描大环境、评估政治经济社会技术法律因素影响时使用</div>
 </div>
 <div class="skill-card" data-skill="porters-five-forces">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">porters-five-forces</span>
     <span class="skill-cn">波特五力分析</span>
+    <span class="skill-orig">porters-five-forces</span>
   </div>
   <div class="skill-scenario">当你需要评估行业竞争格局、供应商和买家议价能力时使用</div>
 </div>
 <div class="skill-card" data-skill="monetization-strategy">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">monetization-strategy</span>
     <span class="skill-cn">变现策略设计</span>
+    <span class="skill-orig">monetization-strategy</span>
   </div>
   <div class="skill-scenario">当你需要设计收费模型、思考怎么赚钱时使用</div>
 </div>
 <div class="skill-card" data-skill="pricing-strategy">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">pricing-strategy</span>
     <span class="skill-cn">定价策略设计</span>
+    <span class="skill-orig">pricing-strategy</span>
   </div>
   <div class="skill-scenario">当你需要定价格、分析竞品定价、评估付费意愿时使用</div>
 </div>
 <div class="skill-card" data-skill="value-proposition">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">value-proposition</span>
     <span class="skill-cn">价值主张设计</span>
+    <span class="skill-orig">value-proposition</span>
   </div>
   <div class="skill-scenario">当你需要回答用户为什么选我们、用 JTBD 六段模板时使用</div>
 </div>
@@ -279,86 +325,98 @@ footer a{color:#6e6e7a;text-decoration:none}
       <div class="tab-panel" data-panel="产品发现">
         <div class="skill-grid">
 <div class="skill-card" data-skill="brainstorm-ideas-new">
+  <svg class="skill-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">brainstorm-ideas-new</span>
     <span class="skill-cn">新产品创意</span>
+    <span class="skill-orig">brainstorm-ideas-new</span>
   </div>
   <div class="skill-scenario">当你需要从零开始想新产品点子、做 startup idea brainstorming 时使用</div>
 </div>
 <div class="skill-card" data-skill="brainstorm-ideas-existing">
+  <svg class="skill-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">brainstorm-ideas-existing</span>
     <span class="skill-cn">现有产品创意</span>
+    <span class="skill-orig">brainstorm-ideas-existing</span>
   </div>
   <div class="skill-scenario">当你需要为现有产品想新功能、用 PM+Designer+Engineer 三视角时使用</div>
 </div>
 <div class="skill-card" data-skill="brainstorm-experiments-new">
+  <svg class="skill-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">brainstorm-experiments-new</span>
     <span class="skill-cn">新产品验证实验</span>
+    <span class="skill-orig">brainstorm-experiments-new</span>
   </div>
   <div class="skill-scenario">当你需要用 pretotype、landing page 测试验证新产品假设时使用</div>
 </div>
 <div class="skill-card" data-skill="brainstorm-experiments-existing">
+  <svg class="skill-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">brainstorm-experiments-existing</span>
     <span class="skill-cn">现有产品实验</span>
+    <span class="skill-orig">brainstorm-experiments-existing</span>
   </div>
   <div class="skill-scenario">当你需要设计 A/B 测试、低成本验证产品假设时使用</div>
 </div>
 <div class="skill-card" data-skill="identify-assumptions-new">
+  <svg class="skill-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">identify-assumptions-new</span>
     <span class="skill-cn">新产品假设识别</span>
+    <span class="skill-orig">identify-assumptions-new</span>
   </div>
   <div class="skill-scenario">当你需要评估创业风险、用 8 类风险维度排查新项目时使用</div>
 </div>
 <div class="skill-card" data-skill="identify-assumptions-existing">
+  <svg class="skill-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">identify-assumptions-existing</span>
     <span class="skill-cn">现有产品假设识别</span>
+    <span class="skill-orig">identify-assumptions-existing</span>
   </div>
   <div class="skill-scenario">当你需要用 VUFs 四维度做风险排查、找风险假设时使用</div>
 </div>
 <div class="skill-card" data-skill="prioritize-assumptions">
+  <svg class="skill-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">prioritize-assumptions</span>
     <span class="skill-cn">假设优先级排序</span>
+    <span class="skill-orig">prioritize-assumptions</span>
   </div>
   <div class="skill-scenario">当你需要用 Impact x Risk 矩阵决定先测哪个假设时使用</div>
 </div>
 <div class="skill-card" data-skill="opportunity-solution-tree">
+  <svg class="skill-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">opportunity-solution-tree</span>
     <span class="skill-cn">机会解决方案树</span>
+    <span class="skill-orig">opportunity-solution-tree</span>
   </div>
   <div class="skill-scenario">当你需要用 Teresa Torres 方法做产品发现结构化时使用</div>
 </div>
 <div class="skill-card" data-skill="interview-script">
+  <svg class="skill-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">interview-script</span>
     <span class="skill-cn">用户访谈脚本</span>
+    <span class="skill-orig">interview-script</span>
   </div>
   <div class="skill-scenario">当你需要写访谈提纲、用 The Mom Test 原则时使用</div>
 </div>
 <div class="skill-card" data-skill="summarize-interview">
+  <svg class="skill-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">summarize-interview</span>
     <span class="skill-cn">访谈纪要整理</span>
+    <span class="skill-orig">summarize-interview</span>
   </div>
   <div class="skill-scenario">当你需要整理用户访谈记录、提取 JTBD 洞察时使用</div>
 </div>
 <div class="skill-card" data-skill="analyze-feature-requests">
+  <svg class="skill-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">analyze-feature-requests</span>
     <span class="skill-cn">功能需求排序</span>
+    <span class="skill-orig">analyze-feature-requests</span>
   </div>
   <div class="skill-scenario">当你需要整理用户反馈、做需求优先级排序时使用</div>
 </div>
 <div class="skill-card" data-skill="prioritize-features">
+  <svg class="skill-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">prioritize-features</span>
     <span class="skill-cn">功能优先级排序</span>
+    <span class="skill-orig">prioritize-features</span>
   </div>
   <div class="skill-scenario">当你需要按影响力+工作量+风险+战略对齐排序功能时使用</div>
 </div>
@@ -367,65 +425,74 @@ footer a{color:#6e6e7a;text-decoration:none}
       <div class="tab-panel" data-panel="市场研究">
         <div class="skill-grid">
 <div class="skill-card" data-skill="competitor-analysis">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">competitor-analysis</span>
     <span class="skill-cn">竞品分析</span>
+    <span class="skill-orig">competitor-analysis</span>
   </div>
   <div class="skill-scenario">当你需要分析竞争格局、找差异化机会、评估竞品优劣势时使用</div>
 </div>
 <div class="skill-card" data-skill="customer-journey-map">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">customer-journey-map</span>
     <span class="skill-cn">客户旅程地图</span>
+    <span class="skill-orig">customer-journey-map</span>
   </div>
   <div class="skill-scenario">当你需要画用户体验地图、可视化触点和情绪痛点时使用</div>
 </div>
 <div class="skill-card" data-skill="market-segments">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">market-segments</span>
     <span class="skill-cn">市场细分分析</span>
+    <span class="skill-orig">market-segments</span>
   </div>
   <div class="skill-scenario">当你需要做用户群体画像、JTBD 分群、评估新市场时使用</div>
 </div>
 <div class="skill-card" data-skill="market-sizing">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">market-sizing</span>
     <span class="skill-cn">市场规模估算</span>
+    <span class="skill-orig">market-sizing</span>
   </div>
   <div class="skill-scenario">当你需要算 TAM SAM SOM、准备投资人材料时使用</div>
 </div>
 <div class="skill-card" data-skill="sentiment-analysis">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">sentiment-analysis</span>
     <span class="skill-cn">用户反馈情感分析</span>
+    <span class="skill-orig">sentiment-analysis</span>
   </div>
   <div class="skill-scenario">当你需要分析用户评价、做情感打分和评论洞察时使用</div>
 </div>
 <div class="skill-card" data-skill="user-personas">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">user-personas</span>
     <span class="skill-cn">用户画像创建</span>
+    <span class="skill-orig">user-personas</span>
   </div>
   <div class="skill-scenario">当你需要做 3 个 personas + JTBD + pains + gains 时使用</div>
 </div>
 <div class="skill-card" data-skill="user-segmentation">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">user-segmentation</span>
     <span class="skill-cn">用户分群模型</span>
+    <span class="skill-orig">user-segmentation</span>
   </div>
   <div class="skill-scenario">当你需要按行为分群、至少区分 3 类用户时使用</div>
 </div>
 <div class="skill-card" data-skill="beachhead-segment">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">beachhead-segment</span>
     <span class="skill-cn">滩头阵地细分</span>
+    <span class="skill-orig">beachhead-segment</span>
   </div>
   <div class="skill-scenario">当你需要选首发市场、找 burning pain 和切入策略时使用</div>
 </div>
 <div class="skill-card" data-skill="ideal-customer-profile">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">ideal-customer-profile</span>
     <span class="skill-cn">理想客户画像</span>
+    <span class="skill-orig">ideal-customer-profile</span>
   </div>
   <div class="skill-scenario">当你需要定义 ICP、用人口+行为+JTBD 描述最好的客户时使用</div>
 </div>
@@ -434,30 +501,34 @@ footer a{color:#6e6e7a;text-decoration:none}
       <div class="tab-panel" data-panel="数据分析">
         <div class="skill-grid">
 <div class="skill-card" data-skill="ab-test-analysis">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">ab-test-analysis</span>
     <span class="skill-cn">A/B 测试分析</span>
+    <span class="skill-orig">ab-test-analysis</span>
   </div>
   <div class="skill-scenario">当你需要分析 AB 测试结果、统计显著性、做 ship/extend/stop 决策时使用</div>
 </div>
 <div class="skill-card" data-skill="cohort-analysis">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">cohort-analysis</span>
     <span class="skill-cn">同期群留存分析</span>
+    <span class="skill-orig">cohort-analysis</span>
   </div>
   <div class="skill-scenario">当你需要分析留存曲线、功能采纳趋势、流失模式时使用</div>
 </div>
 <div class="skill-card" data-skill="sql-queries">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">sql-queries</span>
     <span class="skill-cn">自然语言转 SQL</span>
+    <span class="skill-orig">sql-queries</span>
   </div>
   <div class="skill-scenario">当你需要写 SQL 查询、从业务问题到查询语句时使用</div>
 </div>
 <div class="skill-card" data-skill="metrics-dashboard">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">metrics-dashboard</span>
     <span class="skill-cn">产品指标仪表板</span>
+    <span class="skill-orig">metrics-dashboard</span>
   </div>
   <div class="skill-scenario">当你需要设计数据看板、搭建北极星指标体系时使用</div>
 </div>
@@ -466,86 +537,98 @@ footer a{color:#6e6e7a;text-decoration:none}
       <div class="tab-panel" data-panel="产品执行">
         <div class="skill-grid">
 <div class="skill-card" data-skill="create-prd">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">create-prd</span>
     <span class="skill-cn">PRD 撰写</span>
+    <span class="skill-orig">create-prd</span>
   </div>
   <div class="skill-scenario">当你需要写产品需求文档、用 8 段模板或 feature spec 时使用</div>
 </div>
 <div class="skill-card" data-skill="user-stories">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">user-stories</span>
     <span class="skill-cn">用户故事编写</span>
+    <span class="skill-orig">user-stories</span>
   </div>
   <div class="skill-scenario">当你需要用 3C+INVEST 标准写用户故事、定义验收条件时使用</div>
 </div>
 <div class="skill-card" data-skill="job-stories">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">job-stories</span>
     <span class="skill-cn">Job Stories 编写</span>
+    <span class="skill-orig">job-stories</span>
   </div>
   <div class="skill-scenario">当你需要用 When-Motivation-Outcome 格式写 JTBD 风格 backlog 时使用</div>
 </div>
 <div class="skill-card" data-skill="wwas">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">wwas</span>
     <span class="skill-cn">WWA 格式 Backlog</span>
+    <span class="skill-orig">wwas</span>
   </div>
   <div class="skill-scenario">当你需要写 Why-What-Acceptance 格式的独立有价值可测试工作项时使用</div>
 </div>
 <div class="skill-card" data-skill="test-scenarios">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">test-scenarios</span>
     <span class="skill-cn">测试场景编写</span>
+    <span class="skill-orig">test-scenarios</span>
   </div>
   <div class="skill-scenario">当你需要写 QA test cases、覆盖 happy path+edge cases+异常处理时使用</div>
 </div>
 <div class="skill-card" data-skill="dummy-dataset">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">dummy-dataset</span>
     <span class="skill-cn">测试数据生成</span>
+    <span class="skill-orig">dummy-dataset</span>
   </div>
   <div class="skill-scenario">当你需要生成 mock data、CSV JSON SQL Python 脚本样例数据时使用</div>
 </div>
 <div class="skill-card" data-skill="release-notes">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">release-notes</span>
     <span class="skill-cn">发布说明生成</span>
+    <span class="skill-orig">release-notes</span>
   </div>
   <div class="skill-scenario">当你需要写 release notes、更新日志、产品更新说明时使用</div>
 </div>
 <div class="skill-card" data-skill="sprint-plan">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">sprint-plan</span>
     <span class="skill-cn">Sprint 规划</span>
+    <span class="skill-orig">sprint-plan</span>
   </div>
   <div class="skill-scenario">当你需要规划 sprint、做容量估算和 story 选择时使用</div>
 </div>
 <div class="skill-card" data-skill="retro">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">retro</span>
     <span class="skill-cn">Sprint 回顾引导</span>
+    <span class="skill-orig">retro</span>
   </div>
   <div class="skill-scenario">当你需要做回顾会议、what went well / what didn't、行动项+owner 时使用</div>
 </div>
 <div class="skill-card" data-skill="stakeholder-map">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">stakeholder-map</span>
     <span class="skill-cn">干系人地图</span>
+    <span class="skill-orig">stakeholder-map</span>
   </div>
   <div class="skill-scenario">当你需要做权力 x 利益矩阵、制定沟通策略时使用</div>
 </div>
 <div class="skill-card" data-skill="brainstorm-okrs">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">brainstorm-okrs</span>
     <span class="skill-cn">OKR 头脑风暴</span>
+    <span class="skill-orig">brainstorm-okrs</span>
   </div>
   <div class="skill-scenario">当你需要定 OKR、做定性 O+量化 KR、对齐公司目标时使用</div>
 </div>
 <div class="skill-card" data-skill="outcome-roadmap">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">outcome-roadmap</span>
     <span class="skill-cn">成果导向路线图</span>
+    <span class="skill-orig">outcome-roadmap</span>
   </div>
   <div class="skill-scenario">当你需要把功能清单转为成果声明、传达战略意图时使用</div>
 </div>
@@ -554,79 +637,90 @@ footer a{color:#6e6e7a;text-decoration:none}
       <div class="tab-panel" data-panel="市场进入">
         <div class="skill-grid">
 <div class="skill-card" data-skill="competitive-battlecard">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">competitive-battlecard</span>
     <span class="skill-cn">竞品对战卡</span>
+    <span class="skill-orig">competitive-battlecard</span>
   </div>
   <div class="skill-scenario">当你需要准备销售竞品材料、回答 why not competitor X 时使用</div>
 </div>
 <div class="skill-card" data-skill="growth-loops">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">growth-loops</span>
     <span class="skill-cn">增长飞轮设计</span>
+    <span class="skill-orig">growth-loops</span>
   </div>
   <div class="skill-scenario">当你需要设计增长循环、病毒/使用/协作/UGC/推荐飞轮时使用</div>
 </div>
 <div class="skill-card" data-skill="gtm-motions">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">gtm-motions</span>
     <span class="skill-cn">GTM 渠道选择</span>
+    <span class="skill-orig">gtm-motions</span>
   </div>
   <div class="skill-scenario">当你需要选 GTM 渠道、7 种 motion（inbound/outbound/PLG/ABM）时使用</div>
 </div>
 <div class="skill-card" data-skill="gtm-strategy">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">gtm-strategy</span>
     <span class="skill-cn">产品发布策略</span>
+    <span class="skill-orig">gtm-strategy</span>
   </div>
   <div class="skill-scenario">当你需要做产品上线计划、GTM strategy、营销渠道+信息+指标时使用</div>
 </div>
 <div class="skill-card" data-skill="marketing-ideas">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">marketing-ideas</span>
     <span class="skill-cn">营销创意生成</span>
+    <span class="skill-orig">marketing-ideas</span>
   </div>
   <div class="skill-scenario">当你需要想营销方案、低成本营销创意、产品推广点子时使用</div>
 </div>
 <div class="skill-card" data-skill="north-star-metric">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">north-star-metric</span>
     <span class="skill-cn">北极星指标定义</span>
+    <span class="skill-orig">north-star-metric</span>
   </div>
   <div class="skill-scenario">当你需要定义北极星指标、用 7 条标准验证时使用</div>
 </div>
 <div class="skill-card" data-skill="positioning-ideas">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">positioning-ideas</span>
     <span class="skill-cn">产品定位创意</span>
+    <span class="skill-orig">positioning-ideas</span>
   </div>
   <div class="skill-scenario">当你需要做差异化定位、品牌区隔、竞品区隔时使用</div>
 </div>
 <div class="skill-card" data-skill="product-name">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">product-name</span>
     <span class="skill-cn">产品命名创意</span>
+    <span class="skill-orig">product-name</span>
   </div>
   <div class="skill-scenario">当你需要想产品名字、品牌命名、五个独特好记的名字时使用</div>
 </div>
 <div class="skill-card" data-skill="value-prop-statements">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">value-prop-statements</span>
     <span class="skill-cn">价值主张文案</span>
+    <span class="skill-orig">value-prop-statements</span>
   </div>
   <div class="skill-scenario">当你需要写营销话术、销售话术、onboarding 文案时使用</div>
 </div>
 <div class="skill-card" data-skill="strategy-red-team">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">strategy-red-team</span>
     <span class="skill-cn">PRD 对抗性评审</span>
+    <span class="skill-orig">strategy-red-team</span>
   </div>
   <div class="skill-scenario">当你需要做对抗性评审、挑刺会、攻击 PRD 假设时使用</div>
 </div>
 <div class="skill-card" data-skill="pre-mortem">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">pre-mortem</span>
     <span class="skill-cn">事前验尸风险分析</span>
+    <span class="skill-orig">pre-mortem</span>
   </div>
   <div class="skill-scenario">当你需要做 pre-mortem、Tiger/Paper Tiger/Elephant 三类风险分析时使用</div>
 </div>
@@ -635,16 +729,18 @@ footer a{color:#6e6e7a;text-decoration:none}
       <div class="tab-panel" data-panel="AI 交付">
         <div class="skill-grid">
 <div class="skill-card" data-skill="intended-vs-implemented">
+  <svg class="skill-icon" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="m6 10 2 2 4-4"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">intended-vs-implemented</span>
     <span class="skill-cn">意图与实现差距审计</span>
+    <span class="skill-orig">intended-vs-implemented</span>
   </div>
   <div class="skill-scenario">当你需要审查 AI 代码、文档与代码一致性、权限审计时使用</div>
 </div>
 <div class="skill-card" data-skill="shipping-artifacts">
+  <svg class="skill-icon" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="m6 10 2 2 4-4"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">shipping-artifacts</span>
     <span class="skill-cn">AI 产品交付文档</span>
+    <span class="skill-orig">shipping-artifacts</span>
   </div>
   <div class="skill-scenario">当你需要做 AI 代码文档化、架构/权限/变量/测试覆盖审计时使用</div>
 </div>
@@ -653,30 +749,34 @@ footer a{color:#6e6e7a;text-decoration:none}
       <div class="tab-panel" data-panel="效率工具">
         <div class="skill-grid">
 <div class="skill-card" data-skill="draft-nda">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.7-3.7a1 1 0 0 0 0-1.4l-1.6-1.6a1 1 0 0 0-1.4 0l-3.7 3.7z"/><path d="M14.7 17.7a1 1 0 0 0 0-1.4l-1.6-1.6a1 1 0 0 0-1.4 0l-3.7 3.7a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.7-3.7z"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">draft-nda</span>
     <span class="skill-cn">起草保密协议</span>
+    <span class="skill-orig">draft-nda</span>
   </div>
   <div class="skill-scenario">当你需要写 NDA、保密合同、confidential agreement 时使用</div>
 </div>
 <div class="skill-card" data-skill="grammar-check">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.7-3.7a1 1 0 0 0 0-1.4l-1.6-1.6a1 1 0 0 0-1.4 0l-3.7 3.7z"/><path d="M14.7 17.7a1 1 0 0 0 0-1.4l-1.6-1.6a1 1 0 0 0-1.4 0l-3.7 3.7a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.7-3.7z"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">grammar-check</span>
     <span class="skill-cn">文本校对润色</span>
+    <span class="skill-orig">grammar-check</span>
   </div>
   <div class="skill-scenario">当你需要检查语法、校对文字、proofread 时使用</div>
 </div>
 <div class="skill-card" data-skill="privacy-policy">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.7-3.7a1 1 0 0 0 0-1.4l-1.6-1.6a1 1 0 0 0-1.4 0l-3.7 3.7z"/><path d="M14.7 17.7a1 1 0 0 0 0-1.4l-1.6-1.6a1 1 0 0 0-1.4 0l-3.7 3.7a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.7-3.7z"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">privacy-policy</span>
     <span class="skill-cn">起草隐私政策</span>
+    <span class="skill-orig">privacy-policy</span>
   </div>
   <div class="skill-scenario">当你需要写隐私政策、数据保护合规、GDPR 声明时使用</div>
 </div>
 <div class="skill-card" data-skill="review-resume">
+  <svg class="skill-icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.7-3.7a1 1 0 0 0 0-1.4l-1.6-1.6a1 1 0 0 0-1.4 0l-3.7 3.7z"/><path d="M14.7 17.7a1 1 0 0 0 0-1.4l-1.6-1.6a1 1 0 0 0-1.4 0l-3.7 3.7a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.7-3.7z"/></svg>
   <div class="skill-header">
-    <span class="skill-orig">review-resume</span>
     <span class="skill-cn">PM 简历评审</span>
+    <span class="skill-orig">review-resume</span>
   </div>
   <div class="skill-scenario">当你需要看简历、做简历优化、简历诊断时使用</div>
 </div>
