@@ -1,0 +1,530 @@
+[
+  {
+    "category": "产品战略",
+    "id": "business-model",
+    "name": "商业模式画布",
+    "description": "BMC 九要素，从价值主张到收入来源",
+    "cn_name": "商业模式画布",
+    "scenario": "当你需要梳理商业模式、向投资人展示价值主张、或验证新业务时使用"
+  },
+  {
+    "category": "产品战略",
+    "id": "lean-canvas",
+    "name": "精益画布",
+    "description": "创业假设验证，问题-方案-指标-UVP",
+    "cn_name": "精益画布",
+    "scenario": "当你需要快速验证创业假设、梳理问题-方案-指标时使用"
+  },
+  {
+    "category": "产品战略",
+    "id": "startup-canvas",
+    "name": "创业画布",
+    "description": "产品战略+商业模型一体化",
+    "cn_name": "创业画布",
+    "scenario": "当你需要同时分析产品战略和商业模型、评估新项目时使用"
+  },
+  {
+    "category": "产品战略",
+    "id": "product-strategy",
+    "name": "产品战略规划",
+    "description": "战略画布，从愿景到护城河",
+    "cn_name": "产品战略规划",
+    "scenario": "当你需要制定产品方向、从愿景到护城河的全局规划时使用"
+  },
+  {
+    "category": "产品战略",
+    "id": "product-vision",
+    "name": "产品愿景设计",
+    "description": "有感染力的产品方向与团队使命",
+    "cn_name": "产品愿景设计",
+    "scenario": "当你需要定义团队使命、写出有感染力的产品方向时使用"
+  },
+  {
+    "category": "产品战略",
+    "id": "swot-analysis",
+    "name": "SWOT 分析",
+    "description": "优劣势机会威胁，战略评估",
+    "cn_name": "SWOT 分析",
+    "scenario": "当你需要评估竞争态势、识别优劣势和外部机会威胁时使用"
+  },
+  {
+    "category": "产品战略",
+    "id": "ansoff-matrix",
+    "name": "安索夫增长矩阵",
+    "description": "市场渗透还是多元化，四象限增长",
+    "cn_name": "安索夫增长矩阵",
+    "scenario": "当你需要选择增长策略——市场渗透还是多元化时使用"
+  },
+  {
+    "category": "产品战略",
+    "id": "pestle-analysis",
+    "name": "PESTLE 宏观分析",
+    "description": "政治经济社会技术法律环境扫描",
+    "cn_name": "PESTLE 宏观分析",
+    "scenario": "当你需要扫描大环境、评估政治经济社会技术法律因素影响时使用"
+  },
+  {
+    "category": "产品战略",
+    "id": "porters-five-forces",
+    "name": "波特五力分析",
+    "description": "行业竞争格局与吸引力评估",
+    "cn_name": "波特五力分析",
+    "scenario": "当你需要评估行业竞争格局、供应商和买家议价能力时使用"
+  },
+  {
+    "category": "产品战略",
+    "id": "monetization-strategy",
+    "name": "变现策略设计",
+    "description": "收费模型、收入方案头脑风暴",
+    "cn_name": "变现策略设计",
+    "scenario": "当你需要设计收费模型、思考怎么赚钱时使用"
+  },
+  {
+    "category": "产品战略",
+    "id": "pricing-strategy",
+    "name": "定价策略设计",
+    "description": "竞品定价、付费意愿、freemium vs paid",
+    "cn_name": "定价策略设计",
+    "scenario": "当你需要定价格、分析竞品定价、评估付费意愿时使用"
+  },
+  {
+    "category": "产品战略",
+    "id": "value-proposition",
+    "name": "价值主张设计",
+    "description": "JTBD 六段模板，用户为什么选我们",
+    "cn_name": "价值主张设计",
+    "scenario": "当你需要回答用户为什么选我们、用 JTBD 六段模板时使用"
+  },
+  {
+    "category": "产品发现",
+    "id": "brainstorm-ideas-new",
+    "name": "新产品创意",
+    "description": "Startup idea brainstorming，产品初期探索",
+    "cn_name": "新产品创意",
+    "scenario": "当你需要从零开始想新产品点子、做 startup idea brainstorming 时使用"
+  },
+  {
+    "category": "产品发现",
+    "id": "brainstorm-ideas-existing",
+    "name": "现有产品创意",
+    "description": "PM+Designer+Engineer 三视角功能创意",
+    "cn_name": "现有产品创意",
+    "scenario": "当你需要为现有产品想新功能、用 PM+Designer+Engineer 三视角时使用"
+  },
+  {
+    "category": "产品发现",
+    "id": "brainstorm-experiments-new",
+    "name": "新产品验证实验",
+    "description": "Pretotype、landing page 测试、XYZ 假设",
+    "cn_name": "新产品验证实验",
+    "scenario": "当你需要用 pretotype、landing page 测试验证新产品假设时使用"
+  },
+  {
+    "category": "产品发现",
+    "id": "brainstorm-experiments-existing",
+    "name": "现有产品实验",
+    "description": "A/B 测试设计，低成本验证方案",
+    "cn_name": "现有产品实验",
+    "scenario": "当你需要设计 A/B 测试、低成本验证产品假设时使用"
+  },
+  {
+    "category": "产品发现",
+    "id": "identify-assumptions-new",
+    "name": "新产品假设识别",
+    "description": "8 类风险维度，创业项目风险排查",
+    "cn_name": "新产品假设识别",
+    "scenario": "当你需要评估创业风险、用 8 类风险维度排查新项目时使用"
+  },
+  {
+    "category": "产品发现",
+    "id": "identify-assumptions-existing",
+    "name": "现有产品假设识别",
+    "description": "VUFs 四维度，assumption mapping",
+    "cn_name": "现有产品假设识别",
+    "scenario": "当你需要用 VUFs 四维度做风险排查、找风险假设时使用"
+  },
+  {
+    "category": "产品发现",
+    "id": "prioritize-assumptions",
+    "name": "假设优先级排序",
+    "description": "Impact×Risk 矩阵，先测哪个假设",
+    "cn_name": "假设优先级排序",
+    "scenario": "当你需要用 Impact x Risk 矩阵决定先测哪个假设时使用"
+  },
+  {
+    "category": "产品发现",
+    "id": "opportunity-solution-tree",
+    "name": "机会解决方案树",
+    "description": "Teresa Torres 方法，产品发现结构化",
+    "cn_name": "机会解决方案树",
+    "scenario": "当你需要用 Teresa Torres 方法做产品发现结构化时使用"
+  },
+  {
+    "category": "产品发现",
+    "id": "interview-script",
+    "name": "用户访谈脚本",
+    "description": "The Mom Test 原则，JTBD 访谈提纲",
+    "cn_name": "用户访谈脚本",
+    "scenario": "当你需要写访谈提纲、用 The Mom Test 原则时使用"
+  },
+  {
+    "category": "产品发现",
+    "id": "summarize-interview",
+    "name": "访谈纪要整理",
+    "description": "JTBD 洞察，satisfaction signals",
+    "cn_name": "访谈纪要整理",
+    "scenario": "当你需要整理用户访谈记录、提取 JTBD 洞察时使用"
+  },
+  {
+    "category": "产品发现",
+    "id": "analyze-feature-requests",
+    "name": "功能需求排序",
+    "description": "用户反馈整理，战略对齐分析",
+    "cn_name": "功能需求排序",
+    "scenario": "当你需要整理用户反馈、做需求优先级排序时使用"
+  },
+  {
+    "category": "产品发现",
+    "id": "prioritize-features",
+    "name": "功能优先级排序",
+    "description": "影响力+工作量+风险+战略对齐",
+    "cn_name": "功能优先级排序",
+    "scenario": "当你需要按影响力+工作量+风险+战略对齐排序功能时使用"
+  },
+  {
+    "category": "市场研究",
+    "id": "competitor-analysis",
+    "name": "竞品分析",
+    "description": "竞争格局、差异化机会、竞品优劣势",
+    "cn_name": "竞品分析",
+    "scenario": "当你需要分析竞争格局、找差异化机会、评估竞品优劣势时使用"
+  },
+  {
+    "category": "市场研究",
+    "id": "customer-journey-map",
+    "name": "客户旅程地图",
+    "description": "触点情绪痛点，用户路径可视化",
+    "cn_name": "客户旅程地图",
+    "scenario": "当你需要画用户体验地图、可视化触点和情绪痛点时使用"
+  },
+  {
+    "category": "市场研究",
+    "id": "market-segments",
+    "name": "市场细分分析",
+    "description": "用户群体画像，JTBD 分群，新市场评估",
+    "cn_name": "市场细分分析",
+    "scenario": "当你需要做用户群体画像、JTBD 分群、评估新市场时使用"
+  },
+  {
+    "category": "市场研究",
+    "id": "market-sizing",
+    "name": "市场规模估算",
+    "description": "TAM SAM SOM，自顶向下+自底向上",
+    "cn_name": "市场规模估算",
+    "scenario": "当你需要算 TAM SAM SOM、准备投资人材料时使用"
+  },
+  {
+    "category": "市场研究",
+    "id": "sentiment-analysis",
+    "name": "用户反馈情感分析",
+    "description": "情感打分，评论洞察，JTBD 满意度",
+    "cn_name": "用户反馈情感分析",
+    "scenario": "当你需要分析用户评价、做情感打分和评论洞察时使用"
+  },
+  {
+    "category": "市场研究",
+    "id": "user-personas",
+    "name": "用户画像创建",
+    "description": "3 personas + JTBD + pains + gains",
+    "cn_name": "用户画像创建",
+    "scenario": "当你需要做 3 个 personas + JTBD + pains + gains 时使用"
+  },
+  {
+    "category": "市场研究",
+    "id": "user-segmentation",
+    "name": "用户分群模型",
+    "description": "行为分群，至少 3 类用户",
+    "cn_name": "用户分群模型",
+    "scenario": "当你需要按行为分群、至少区分 3 类用户时使用"
+  },
+  {
+    "category": "市场研究",
+    "id": "beachhead-segment",
+    "name": "滩头阵地细分",
+    "description": "首发市场选择，burning pain，切入策略",
+    "cn_name": "滩头阵地细分",
+    "scenario": "当你需要选首发市场、找 burning pain 和切入策略时使用"
+  },
+  {
+    "category": "市场研究",
+    "id": "ideal-customer-profile",
+    "name": "理想客户画像",
+    "description": "ICP 定义，人口+行为+JTBD",
+    "cn_name": "理想客户画像",
+    "scenario": "当你需要定义 ICP、用人口+行为+JTBD 描述最好的客户时使用"
+  },
+  {
+    "category": "数据分析",
+    "id": "ab-test-analysis",
+    "name": "A/B 测试分析",
+    "description": "统计显著性、置信区间、ship/extend/stop",
+    "cn_name": "A/B 测试分析",
+    "scenario": "当你需要分析 AB 测试结果、统计显著性、做 ship/extend/stop 决策时使用"
+  },
+  {
+    "category": "数据分析",
+    "id": "cohort-analysis",
+    "name": "同期群留存分析",
+    "description": "留存曲线、功能采纳趋势、流失模式",
+    "cn_name": "同期群留存分析",
+    "scenario": "当你需要分析留存曲线、功能采纳趋势、流失模式时使用"
+  },
+  {
+    "category": "数据分析",
+    "id": "sql-queries",
+    "name": "自然语言转 SQL",
+    "description": "BigQuery/PostgreSQL/MySQL，业务问题到查询",
+    "cn_name": "自然语言转 SQL",
+    "scenario": "当你需要写 SQL 查询、从业务问题到查询语句时使用"
+  },
+  {
+    "category": "数据分析",
+    "id": "metrics-dashboard",
+    "name": "产品指标仪表板",
+    "description": "KPI dashboard，北极星指标体系",
+    "cn_name": "产品指标仪表板",
+    "scenario": "当你需要设计数据看板、搭建北极星指标体系时使用"
+  },
+  {
+    "category": "产品执行",
+    "id": "create-prd",
+    "name": "PRD 撰写",
+    "description": "8 段模板，feature spec，功能说明书",
+    "cn_name": "PRD 撰写",
+    "scenario": "当你需要写产品需求文档、用 8 段模板或 feature spec 时使用"
+  },
+  {
+    "category": "产品执行",
+    "id": "user-stories",
+    "name": "用户故事编写",
+    "description": "3C+INVEST 标准，验收条件",
+    "cn_name": "用户故事编写",
+    "scenario": "当你需要用 3C+INVEST 标准写用户故事、定义验收条件时使用"
+  },
+  {
+    "category": "产品执行",
+    "id": "job-stories",
+    "name": "Job Stories 编写",
+    "description": "When-Motivation-Outcome，JTBD 风格 backlog",
+    "cn_name": "Job Stories 编写",
+    "scenario": "当你需要用 When-Motivation-Outcome 格式写 JTBD 风格 backlog 时使用"
+  },
+  {
+    "category": "产品执行",
+    "id": "wwas",
+    "name": "WWA 格式 Backlog",
+    "description": "Why-What-Acceptance，独立有价值可测试",
+    "cn_name": "WWA 格式 Backlog",
+    "scenario": "当你需要写 Why-What-Acceptance 格式的独立有价值可测试工作项时使用"
+  },
+  {
+    "category": "产品执行",
+    "id": "test-scenarios",
+    "name": "测试场景编写",
+    "description": "QA test cases，happy path+edge cases+异常",
+    "cn_name": "测试场景编写",
+    "scenario": "当你需要写 QA test cases、覆盖 happy path+edge cases+异常处理时使用"
+  },
+  {
+    "category": "产品执行",
+    "id": "dummy-dataset",
+    "name": "测试数据生成",
+    "description": "Mock data，CSV JSON SQL Python 脚本",
+    "cn_name": "测试数据生成",
+    "scenario": "当你需要生成 mock data、CSV JSON SQL Python 脚本样例数据时使用"
+  },
+  {
+    "category": "产品执行",
+    "id": "release-notes",
+    "name": "发布说明生成",
+    "description": "更新日志，新功能+改进+修复",
+    "cn_name": "发布说明生成",
+    "scenario": "当你需要写 release notes、更新日志、产品更新说明时使用"
+  },
+  {
+    "category": "产品执行",
+    "id": "sprint-plan",
+    "name": "Sprint 规划",
+    "description": "容量估算、story 选择、依赖关系",
+    "cn_name": "Sprint 规划",
+    "scenario": "当你需要规划 sprint、做容量估算和 story 选择时使用"
+  },
+  {
+    "category": "产品执行",
+    "id": "retro",
+    "name": "Sprint 回顾引导",
+    "description": "What went well / what didn't，行动项+owner",
+    "cn_name": "Sprint 回顾引导",
+    "scenario": "当你需要做回顾会议、what went well / what didn't、行动项+owner 时使用"
+  },
+  {
+    "category": "产品执行",
+    "id": "stakeholder-map",
+    "name": "干系人地图",
+    "description": "权力×利益矩阵，沟通策略",
+    "cn_name": "干系人地图",
+    "scenario": "当你需要做权力 x 利益矩阵、制定沟通策略时使用"
+  },
+  {
+    "category": "产品执行",
+    "id": "brainstorm-okrs",
+    "name": "OKR 头脑风暴",
+    "description": "定性 O+量化 KR，公司目标对齐",
+    "cn_name": "OKR 头脑风暴",
+    "scenario": "当你需要定 OKR、做定性 O+量化 KR、对齐公司目标时使用"
+  },
+  {
+    "category": "产品执行",
+    "id": "outcome-roadmap",
+    "name": "成果导向路线图",
+    "description": "功能清单转为成果声明，战略意图",
+    "cn_name": "成果导向路线图",
+    "scenario": "当你需要把功能清单转为成果声明、传达战略意图时使用"
+  },
+  {
+    "category": "市场进入",
+    "id": "competitive-battlecard",
+    "name": "竞品对战卡",
+    "description": "销售竞品材料，why not competitor X",
+    "cn_name": "竞品对战卡",
+    "scenario": "当你需要准备销售竞品材料、回答 why not competitor X 时使用"
+  },
+  {
+    "category": "市场进入",
+    "id": "growth-loops",
+    "name": "增长飞轮设计",
+    "description": "病毒/使用/协作/UGC/推荐五种飞轮",
+    "cn_name": "增长飞轮设计",
+    "scenario": "当你需要设计增长循环、病毒/使用/协作/UGC/推荐飞轮时使用"
+  },
+  {
+    "category": "市场进入",
+    "id": "gtm-motions",
+    "name": "GTM 渠道选择",
+    "description": "7 种 motion，inbound outbound PLG ABM",
+    "cn_name": "GTM 渠道选择",
+    "scenario": "当你需要选 GTM 渠道、7 种 motion（inbound/outbound/PLG/ABM）时使用"
+  },
+  {
+    "category": "市场进入",
+    "id": "gtm-strategy",
+    "name": "产品发布策略",
+    "description": "营销渠道+信息+指标+时间线",
+    "cn_name": "产品发布策略",
+    "scenario": "当你需要做产品上线计划、GTM strategy、营销渠道+信息+指标时使用"
+  },
+  {
+    "category": "市场进入",
+    "id": "marketing-ideas",
+    "name": "营销创意生成",
+    "description": "低成本营销创意，产品推广点子",
+    "cn_name": "营销创意生成",
+    "scenario": "当你需要想营销方案、低成本营销创意、产品推广点子时使用"
+  },
+  {
+    "category": "市场进入",
+    "id": "north-star-metric",
+    "name": "北极星指标定义",
+    "description": "业务游戏分类，7 条标准验证",
+    "cn_name": "北极星指标定义",
+    "scenario": "当你需要定义北极星指标、用 7 条标准验证时使用"
+  },
+  {
+    "category": "市场进入",
+    "id": "positioning-ideas",
+    "name": "产品定位创意",
+    "description": "差异化定位，品牌区隔，竞品区隔",
+    "cn_name": "产品定位创意",
+    "scenario": "当你需要做差异化定位、品牌区隔、竞品区隔时使用"
+  },
+  {
+    "category": "市场进入",
+    "id": "product-name",
+    "name": "产品命名创意",
+    "description": "品牌命名，五个独特好记的名字",
+    "cn_name": "产品命名创意",
+    "scenario": "当你需要想产品名字、品牌命名、五个独特好记的名字时使用"
+  },
+  {
+    "category": "市场进入",
+    "id": "value-prop-statements",
+    "name": "价值主张文案",
+    "description": "营销话术，onboarding 文案",
+    "cn_name": "价值主张文案",
+    "scenario": "当你需要写营销话术、销售话术、onboarding 文案时使用"
+  },
+  {
+    "category": "市场进入",
+    "id": "strategy-red-team",
+    "name": "PRD 对抗性评审",
+    "description": "攻击假设，压力测试，执行层评审准备",
+    "cn_name": "PRD 对抗性评审",
+    "scenario": "当你需要做对抗性评审、挑刺会、攻击 PRD 假设时使用"
+  },
+  {
+    "category": "市场进入",
+    "id": "pre-mortem",
+    "name": "事前验尸风险分析",
+    "description": "Tiger/Paper Tiger/Elephant 三类风险",
+    "cn_name": "事前验尸风险分析",
+    "scenario": "当你需要做 pre-mortem、Tiger/Paper Tiger/Elephant 三类风险分析时使用"
+  },
+  {
+    "category": "AI 交付",
+    "id": "intended-vs-implemented",
+    "name": "意图与实现差距审计",
+    "description": "文档与代码一致性，权限审计",
+    "cn_name": "意图与实现差距审计",
+    "scenario": "当你需要审查 AI 代码、文档与代码一致性、权限审计时使用"
+  },
+  {
+    "category": "AI 交付",
+    "id": "shipping-artifacts",
+    "name": "AI 产品交付文档",
+    "description": "架构/权限/变量/测试覆盖，交付前审计包",
+    "cn_name": "AI 产品交付文档",
+    "scenario": "当你需要做 AI 代码文档化、架构/权限/变量/测试覆盖审计时使用"
+  },
+  {
+    "category": "效率工具",
+    "id": "draft-nda",
+    "name": "起草保密协议",
+    "description": "NDA、保密合同、confidential agreement",
+    "cn_name": "起草保密协议",
+    "scenario": "当你需要写 NDA、保密合同、confidential agreement 时使用"
+  },
+  {
+    "category": "效率工具",
+    "id": "grammar-check",
+    "name": "文本校对润色",
+    "description": "语法检查，proofread，改错别字",
+    "cn_name": "文本校对润色",
+    "scenario": "当你需要检查语法、校对文字、proofread 时使用"
+  },
+  {
+    "category": "效率工具",
+    "id": "privacy-policy",
+    "name": "起草隐私政策",
+    "description": "数据保护合规，GDPR，个人信息收集",
+    "cn_name": "起草隐私政策",
+    "scenario": "当你需要写隐私政策、数据保护合规、GDPR 声明时使用"
+  },
+  {
+    "category": "效率工具",
+    "id": "review-resume",
+    "name": "PM 简历评审",
+    "description": "简历优化，简历诊断，求职简历",
+    "cn_name": "PM 简历评审",
+    "scenario": "当你需要看简历、做简历优化、简历诊断时使用"
+  }
+]
